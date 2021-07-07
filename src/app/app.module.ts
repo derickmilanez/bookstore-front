@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import { HomeComponent } from './components/views/home/home.component';
 import {MatCardModule} from '@angular/material/card';
+import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -21,7 +24,8 @@ import {MatCardModule} from '@angular/material/card';
     HeaderComponent,
     NavComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    CategoriaReadComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,8 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatTableModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
